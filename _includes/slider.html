@@ -1,26 +1,26 @@
 <section class="slider">
   <div class="container">
-  <header>
-    <h2>{{ site.sections.slider }}</h2>
-    {% if site.sections.slider.subtitle %}
-      <p class="subtitle">{{ site.sections.slider.subtitle }}</p>
-    {% endif %}
-  </header>
-  <div class="glider-contain">
-    <div class="glider">
-    {% for slide in site.slider %}
-      <div class="slide">
-        <h3>{{ slide.title }}</h3>
-        <div class="slide-content">
-          {{ slide.description }}
+    <header>
+      <h2>{{ site.data.slider.title }}</h2>
+      {% if site.data.slider.subtitle %}
+        <p class="subtitle">{{ site.data.slider.subtitle }}</p>
+      {% endif %}
+    </header>
+    <div class="glider-contain">
+      <div class="glider">
+      {% for slide in site.data.slider.slides %}
+        <div class="slide">
+          <h3>{{ slide.title }}</h3>
+          <div class="slide-content">
+            {{ slide.content }}
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
 
-    <div class="slider-buttons">
-      <button aria-label="Previous" class="glider-prev">&laquo;</button>
-      <button aria-label="Next" class="glider-next">&raquo;</button>
-      <div role="tablist" class="dots"></div>
+      <div class="slider-buttons">
+        <button aria-label="Previous" class="glider-prev">&laquo;</button>
+        <button aria-label="Next" class="glider-next">&raquo;</button>
+        <div role="tablist" class="dots"></div>
       </div>
     </div>
   </div>
