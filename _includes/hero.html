@@ -1,14 +1,16 @@
 <section class="hero">
-  <header>
-    <h1>{{ site.data.hero.title }}</h1>
-    <p class="hero-subtitle">{{ site.data.hero.subtitle }}</p>
-  </header>
-  <div class="hero-text">
-    <p>{{ site.data.hero.text }}</p>
-  </div>
-  <div class="hero-buttons">
-  {% for button in site.data.hero.buttons %}
-    <a href="{{ button.url }}" class="button{% if button.class %} {{ button.class }}{% endif %}">{{ button.label }}</a>
-  {% endfor %}
+  <div class="container">
+    <header>
+      <h1>{{ site.data.hero.title }}</h1>
+      <p class="hero-subtitle">{{ site.data.hero.subtitle }}</p>
+    </header>
+    <div class="hero-text">
+      <p>{{ site.data.hero.text }}</p>
+    </div>
+    <div class="hero-buttons">
+    {% for button in site.data.hero.buttons %}
+      <a href="{{ button.url }}" class="button{% if button.class %} {{ button.class }}{% endif %}">{{ button.label }}</a>
+    {% endfor %}
+    </div>
   </div>
 </section>

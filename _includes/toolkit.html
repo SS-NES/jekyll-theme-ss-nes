@@ -1,24 +1,26 @@
 <section class="toolkit">
-  <header>
-    <h2>{{ site.data.toolkit.title }}</h2>
-    {% if site.data.toolkit.subtitle %}
-      <p class="subtitle">{{ site.data.toolkit.subtitle }}</p>
-    {% endif %}
-  </header>
-  <div class="section-container">
-    <ul class="tools">
-    {% for tool in site.data.toolkit.items %}
-      <li class="tool-item">
-        <header>
-          <img src="{{ tool.icon | relative_url }}" alt="{{ tool.title }} icon" class="icon tool-icon">
-          <h3>{{ tool.title }}</h3>
-        </header>
-        <div class="tool-summary">
-          {{ tool.summary }}
-        </div>
-        <a href="{{ tool.button.url }}" class="button tool-link">{{ tool.button.label }}</a>
-      </li>
-    {% endfor %}
-    </ul>
+  <div class="container">
+    <header>
+      <h2>{{ site.data.toolkit.title }}</h2>
+      {% if site.data.toolkit.subtitle %}
+        <p class="subtitle">{{ site.data.toolkit.subtitle }}</p>
+      {% endif %}
+    </header>
+    <div class="section-container">
+      <ul class="tools">
+      {% for tool in site.data.toolkit.items %}
+        <li class="tool-item">
+          <header>
+            <img src="{{ tool.icon | relative_url }}" alt="{{ tool.title }} icon" class="icon tool-icon">
+            <h3>{{ tool.title }}</h3>
+          </header>
+          <div class="tool-summary">
+            {{ tool.summary }}
+          </div>
+          <a href="{{ tool.button.url }}" class="button tool-link">{{ tool.button.label }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>
