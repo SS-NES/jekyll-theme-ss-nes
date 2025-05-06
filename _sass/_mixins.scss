@@ -1,0 +1,19 @@
+// Mixins
+
+// Container
+@mixin container($breakpoints: $grid-breakpoints, $max-widths: $container-max-widths) {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  // padding-left: $spacer; // Add some padding for spacing
+  // padding-right: $spacer;
+
+  // Apply max-widths at each breakpoint
+  @each $breakpoint, $value in $breakpoints {
+    @if map-has-key($max-widths, $breakpoint) {
+      @media (min-width: $value) {
+        max-width: map-get($max-widths, $breakpoint);
+      }
+    }
+  }
+}

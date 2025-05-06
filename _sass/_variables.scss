@@ -1,0 +1,88 @@
+/*
+
+--tdcc-header-1-section: #183d76;
+
+
+--tdcc-btn-bg-default: #183d76;
+--tdcc-btn-bg-outline: rgba(24, 61, 118, 0.12);
+--tdcc-btn-bg-disabled: rgba(24, 61, 118, 0.4);
+--tdcc-btn-bg-outline-disabled: rgba(24, 61, 118, 0.12);
+*/
+
+// Colors
+$white:                  #ffffff !default;
+$black:                  #000000 !default;
+
+$bg-color:               $white !default;
+$bg-color-alt:           #f9f5f2 !default;
+$primary-color:          #676767 !default;
+$secondary-color:        #f9f5f2 !default;
+$orange-color:           #f39122;
+$blue-light-color:       #00afd9;
+$purple-color:           #512e8a;
+$blue-dark-color:        #183d76;
+$blue-extra-dark-color:  #0a1930;
+$gray-color:             #d8d8d8 !default;
+
+// Spacing
+$spacer: 1rem !default;
+
+// Body
+$body-color:                  $primary-color !default;
+$body-bg:                     $bg-color-alt !default;
+
+// Typography
+$font-family-sans-serif:      system-ui, -apple-system, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif-alt:  "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-monospace:       Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        $font-family-sans-serif-alt !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+// Links
+$link-color:                  $blue-dark-color !default;
+$link-decoration:             underline !default;
+$link-hover-color:            $blue-dark-color !default;
+$link-hover-decoration:       null !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+// Border
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-xxl:           2rem !default;
+
+// Shadows
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;

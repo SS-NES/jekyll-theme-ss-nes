@@ -1,0 +1,27 @@
+// Base styles
+
+:root,
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family-sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+}
+
+h1 {
+  font-size: $font-size-lg;
+  margin: $headings-margin-bottom 0;
+}
+
+h2 {
+  background-color: transparent;
+  color: $blue-dark-color;
+}
+
+.container {
+  @include container();
+}
