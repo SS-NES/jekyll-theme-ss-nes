@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      {% include header.html %}
+
+      <main>
+        {% include hero.html %}
+        {% include slider.html %}
+        {% include accordion.html %}
+        {% include toolkit.html %}
+
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+$backgroundColor: #ffffff;
+$bodyColor: #000000;
+$bodyFont: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFont: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import "fonts/open-sans-latin";
+@import "fonts/dm-sans-latin";
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+}

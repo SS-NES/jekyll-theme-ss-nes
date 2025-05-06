@@ -1,0 +1,25 @@
+<section class="accordion">
+  <header>
+    <h2>{{ site.data.accordion.title }}</h2>
+    {% if site.data.accordion.subtitle %}
+      <p class="subtitle">{{ site.data.accordion.subtitle }}</p>
+    {% endif %}
+  </header>
+  <div class="section-container">
+  {% for item in site.data.accordion.items %}
+    <div class="accordion-item">
+      <button class="accordion-button" aria-expanded="false" aria-controls="accordion-content-{{ forloop.index }}">
+        <img src="{{ item.icon | relative_url }}" alt="{{ item.title }}" class="icon accordion-icon">
+        <h3>{{ item.title }}</h3>
+      </button>
+      <div class="accordion-summary">
+        <p>{{ item.summary }}</p>
+      </div>
+      <div class="accordion-content">
+        <h4>{{ item.subtitle }}</h4>
+        {{ item.content }}
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</section>

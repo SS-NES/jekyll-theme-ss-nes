@@ -1,0 +1,27 @@
+<footer>
+  <div class="footer-content">
+    <div class="footer-menu1">
+    {% if site.data.footer.links1 %}
+      <h4>{{ site.data.footer.links1.title }}</h4>
+      <ul>
+      {% for link in site.data.footer.links1.items %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    </div>
+    <div class="footer-menu2">
+    {% if site.data.footer.links2 %}
+      <h4>{{ site.data.footer.links2.title }}</h4>
+      <ul>
+      {% for link in site.data.footer.links2.items %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>{{ site.data.footer.copyright }}</p>
+  </div>
+</footer>
