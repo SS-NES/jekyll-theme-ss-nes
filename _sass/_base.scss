@@ -2,26 +2,86 @@
 
 :root,
 body {
+  margin: 0;
   background: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  margin: 0;
+  line-height: $line-height-base;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family;
+  margin: 0 0 $headings-margin-bottom;
 }
 
 h1 {
-  font-size: $font-size-lg;
-  margin: $headings-margin-bottom 0;
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.12rem;
 }
 
 h2 {
+  font-size: $h2-font-size;
   background-color: transparent;
   color: $blue-dark-color;
+  letter-spacing: -0.12rem;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  letter-spacing: -0.06rem;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  letter-spacing: -0.06rem;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  letter-spacing: -0.06rem;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  letter-spacing: -0.06rem;
+}
+
+p {
+  margin: 0 0 $spacer;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .container {
   @include container();
+}
+
+.button {
+  display: inline-block;
+  padding: $btn-padding-y $btn-padding-x;
+  font-family: $btn-font-family;
+  font-size: $btn-font-size; // TODO - check if this is correct
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  border: $btn-border-width solid $btn-border-color;
+  @include border-radius($btn-border-radius);
+
+  &.secondary {
+    background-color: $btn-secondary-bg-color;
+    color: $btn-secondary-color;
+    border-color: $btn-secondary-border-color;
+  }
 }
