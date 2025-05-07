@@ -1,5 +1,13 @@
 <header>
-  <nav class="container">
-    <a href="{{ site.urls.tdcc | default: "" }}">TDCC</a>
-  </nav>
+  {% assign logo = site.data.header.logo %}
+  {% if logo %}
+    <nav class="container">
+      <a href="{{ logo.link | default: "" }}"><img
+        src="{{ logo.url | relative_url }}"
+        srcset="{{ logo.url_small | relative_url }} 1x, {{ logo.url | relative_url }} 2x"
+        width="{{ logo.width }}"
+        height="{{ logo.height }}"
+        alt="{{ logo.alt }}"></a>
+    </nav>
+  {% endif %}
 </header>
