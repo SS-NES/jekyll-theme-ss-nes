@@ -99,13 +99,38 @@ section {
   }
 
   &.slider {
-    .section-container {
-      @extend .container;
+    .glider-contain {
+      width: 100vw; // Full width
+      max-width: calc(100vw - var(--scroll-bar-width));
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
     }
 
-    .glider-container {
-      width: 100%; // Full width
-      margin: 0 auto; // Centered
+    .slider-buttons {
+      display: none;
+    }
+
+    .slide {
+      padding: $spacer * 2;
+      background-color: $white;
+      color: $primary-color;
+      border-radius: $border-radius;
+
+      .slide-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        column-gap: $spacer * 2;
+      }
+
+      .slide-image {
+        max-width: 50%;
+      }
+
+      .slide-content {
+        max-width: 50%;
+        align-self: center;
+      }
     }
   }
 
