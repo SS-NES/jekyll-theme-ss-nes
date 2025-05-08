@@ -4,8 +4,10 @@
   document.addEventListener('DOMContentLoaded', () => {
     new Glider(document.querySelector('.glider'), {
       slidesToScroll: 1,
-      slidesToShow: 1.7,
+      slidesToShow: 1.5,
       draggable: true,
+      scrollLock: true,
+      duration: 2.0,
       dots: '.dots',
       arrows: {
         prev: '.glider-prev',
