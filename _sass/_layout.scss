@@ -18,6 +18,12 @@
 section {
   padding: 7.5rem 0;
 
+  h2 {
+    &:last-child {
+      margin-bottom: $spacer * 3;
+    }
+  }
+
   &.hero {
     position: relative;
     min-height: 80vh;
@@ -146,6 +152,10 @@ section {
     h2 {
       background-color: transparent;
       color: $white;
+    }
+
+    .container > header .subtitle {
+      margin-bottom: $spacer * 3;
     }
 
     ul.tools {

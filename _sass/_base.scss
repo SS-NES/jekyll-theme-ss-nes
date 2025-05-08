@@ -13,8 +13,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $headings-font-family;
   margin: 0 0 $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  background-color: transparent;
+  color: $headings-color;
 }
 
 h1 {
@@ -57,6 +62,10 @@ p {
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &.subtitle {
+    @extend h3;
   }
 }
 
