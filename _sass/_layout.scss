@@ -26,7 +26,6 @@ section {
 
   &.hero {
     position: relative;
-    min-height: 80vh;
     // TODO: use variable instead of hardcoded rgba()
     background-color: transparent;
     background-image: linear-gradient(to bottom, $orange-color 0%, rgba(249, 245, 242, 0.5));
