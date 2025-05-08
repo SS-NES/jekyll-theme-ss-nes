@@ -1,0 +1,16 @@
+(() => {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    new Glider(document.querySelector('.glider'), {
+      slidesToScroll: 1,
+      slidesToShow: 1.7,
+      draggable: true,
+      dots: '.dots',
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      },
+    });
+  });
+})()
