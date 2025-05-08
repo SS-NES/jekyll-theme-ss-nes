@@ -115,21 +115,39 @@ section {
       display: none;
     }
 
+    .slider-dots {
+      margin-top: $spacer;
+    }
+
     .slide {
+      margin-right: $spacer * 3;
       padding: $spacer * 2;
       background-color: $white;
       color: $primary-color;
       border-radius: $border-radius;
+
+      &:last-child {
+        margin-right: $spacer * 1.5;
+      }
 
       .slide-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         column-gap: $spacer * 2;
+        height: 100%;
       }
 
       .slide-image {
         max-width: 50%;
+        height: 100%;
+        align-self: flex-start;
+
+        img {
+          max-width: auto;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       .slide-content {
