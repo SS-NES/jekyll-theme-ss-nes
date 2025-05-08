@@ -1,0 +1,33 @@
+// Toolkit section
+section.toolkit {
+  padding: $spacer * 6 0 $spacer * 10;
+  background-image: linear-gradient(to bottom, $blue-dark-color, #0a1930);
+  color: $white;
+
+  h2 {
+    background-color: transparent;
+    color: $white;
+  }
+
+  .container > header .subtitle {
+    margin-bottom: $spacer * 3;
+  }
+
+  ul.tools {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0 0 $spacer;
+      padding: 6.25rem 6.25rem 6.25rem 2.5rem;
+      background-color: $white;
+      color: $primary-color;
+      border-radius: $border-radius * 3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

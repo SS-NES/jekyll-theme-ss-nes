@@ -1,0 +1,79 @@
+// Hero section
+section.hero {
+  position: relative;
+  // TODO: use variable instead of hardcoded rgba()
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, $orange-color 0%, rgba(249, 245, 242, 0.5));
+  color: $white;
+
+  // Hero decoration image (background)
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    background: transparent url('/assets/img/header-bg/hero-shape-bg.svg') no-repeat center center;
+    background-size: 100% 100%;
+    background-position: 100px -100px;
+    max-height: 80vh;
+    opacity: 0.5;
+  }
+
+  // Hero decoration image (foreground)
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    background: transparent url('/assets/img/header-bg/hero-shape-fg.svg') no-repeat center center;
+    background-size: 100% 100%;
+    max-height: 80vh;
+  }
+
+  header,
+  .hero-text {
+    // position: relative;
+    z-index: 2;
+    width: 50%;
+  }
+
+  header {
+    h1 {
+      margin: 0;
+      letter-spacing: -0.12rem;
+      line-height: 120%;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      // font-family: $headings-font-family;
+      font-size: $h1-font-size * 0.5;
+      font-weight: $font-weight-medium;
+      line-height: $line-height-base;
+    }
+  }
+
+  .hero-text {
+    margin: 3rem 0;
+    font-size: $font-size-base * 1.333;
+    font-weight: $font-weight-semibold;
+  }
+
+  .hero-buttons {
+    .button {
+      margin-left: $spacer;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
