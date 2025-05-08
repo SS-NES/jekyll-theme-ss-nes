@@ -25,8 +25,33 @@ section.toolkit {
       color: $primary-color;
       border-radius: $border-radius * 3;
 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: $spacer * 3;
+
       &:last-child {
         margin-bottom: 0;
+      }
+
+      header {
+        min-width: 25%;
+        text-align: center;
+      }
+
+      .tool-content {
+        align-self: center;
+      }
+
+      .tool-summary {
+        font-size: $font-size-base;
+      }
+
+      .tool-link {
+        display: inline-block;
+        margin-top: $spacer * 2;
+        font-size: $font-size-base;
+        white-space: nowrap;
       }
     }
   }
