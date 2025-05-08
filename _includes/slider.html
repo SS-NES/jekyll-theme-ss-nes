@@ -1,4 +1,4 @@
-<section class="slider">
+<section class="slider" id="start">
   <div class="container">
     <header>
       <h2>{{ site.data.slider.title }}</h2>
@@ -7,19 +7,27 @@
       {% endif %}
     </header>
     <div class="glider-contain">
-      <div class="glider">
-      {% for slide in site.data.slider.slides %}
-        <div class="slide">
-          <h3>{{ slide.title }}</h3>
-          <div class="slide-content">
-            {{ slide.content }}
-          </div>
-        </div>
-      {% endfor %}
-
       <div class="slider-buttons">
         <button aria-label="Previous" class="glider-prev">&laquo;</button>
         <button aria-label="Next" class="glider-next">&raquo;</button>
+      </div>
+      <div class="glider">
+      {% for slide in site.data.slider.slides %}
+        <div class="slide">
+          <div class="slide-container">
+            <div class="slide-image">
+              <img src="{{ slide.image_url | relative_url }}" alt="{{ slide.image_alt }}">
+            </div>
+            <div class="slide-content">
+              <h3>{{ slide.title }}</h3>
+
+              {{ slide.content }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="slider-dots">
         <div role="tablist" class="dots"></div>
       </div>
     </div>
