@@ -27,6 +27,10 @@ section.slider {
     color: $primary-color;
     border-radius: $border-radius;
 
+    &:first-child {
+      margin-left: $spacer * 3;
+    }
+
     &:last-child {
       margin-right: $spacer * 1.5;
     }
