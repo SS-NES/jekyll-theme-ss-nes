@@ -50,9 +50,9 @@ section {
     h4 {
       margin: 0 0 $spacer * 0.5;
       font-family: $font-family-sans-serif;
-      font-size: $h4-font-size;
+      font-size: $h4-font-size * 0.8;
       font-weight: $font-weight-bold;
-      line-height: $line-height-lg;
+      line-height: $line-height-base * 1.3333;
     }
 
     ul {
@@ -76,6 +76,7 @@ section {
   .footer-bottom {
     margin-top: $spacer * 3;
     text-align: right;
+    font-size: $font-size-base;
 
     p {
       margin: 0;
