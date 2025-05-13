@@ -66,11 +66,16 @@ section {
     }
   }
 
-  a:link,
-  a:visited,
-  a:active,
-  a:hover {
+  a {
+    &:link,
+    &:visited,
+    &:active {
     color: $white;
+    }
+
+    &:hover {
+      color: darken($white, 15%);
+    }
   }
 
   .footer-bottom {

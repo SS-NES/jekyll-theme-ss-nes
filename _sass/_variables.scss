@@ -76,7 +76,7 @@ $headings-color:              inherit !default;
 // Links
 $link-color:                  $blue-dark-color !default;
 $link-decoration:             underline !default;
-$link-hover-color:            $blue-dark-color !default;
+$link-hover-color:            lighten($blue-dark-color, 15%) !default;
 $link-hover-decoration:       null !default;
 
 // Grid breakpoints
