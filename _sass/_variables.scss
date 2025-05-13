@@ -15,6 +15,8 @@ $black:                  #000000 !default;
 
 $bg-color:               $white !default;
 $bg-color-alt:           #f9f5f2 !default;
+$bg-color-grey:          #eceae9 !default;
+$bg-color-dark:          #183d7666 !default;
 $primary-color:          #676767 !default;
 $secondary-color:        #f9f5f2 !default;
 $orange-color:           #f39122 !default;
@@ -112,6 +114,9 @@ $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 
+// Transitions
+$transition-base:             all .3s ease-in-out !default;
+
 // Buttons + Forms
 $input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         3rem !default;
@@ -128,6 +133,8 @@ $input-btn-padding-x-lg:      1rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      $border-width !default;
+
+$input-transition:            border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Buttons
 $btn-bg-color:                $blue-dark-color !default;
@@ -161,3 +168,5 @@ $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
