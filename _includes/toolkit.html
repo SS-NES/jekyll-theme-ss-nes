@@ -16,7 +16,7 @@
           </header>
           <div class="tool-content">
             <div class="tool-summary">
-              {{ tool.summary }}
+              {{ tool.summary | markdownify }}
             </div>
             <a href="{{ tool.button.url }}" class="button tool-link">{{ tool.button.label }}</a>
           </div>

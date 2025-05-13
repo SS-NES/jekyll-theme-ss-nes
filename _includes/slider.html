@@ -21,7 +21,7 @@
             <div class="slide-content">
               <h3>{{ slide.title }}</h3>
 
-              {{ slide.content }}
+              {{ slide.content | markdownify }}
             </div>
           </div>
         </div>
