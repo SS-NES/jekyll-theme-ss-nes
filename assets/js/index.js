@@ -2,10 +2,13 @@
   'use strict';
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Initialize slider using Glider.js library
+    if (typeof Glider !== 'undefined') {
     new Glider(document.querySelector('.glider'), {
       slidesToScroll: 1,
       slidesToShow: 1.5,
       draggable: true,
+        dragVelocity: 1.5,
       scrollLock: true,
       duration: 2.0,
       dots: '.dots',
@@ -14,6 +17,7 @@
         next: '.glider-next'
       },
     });
+    }
   });
 
   // Calculate scrollbar width and update CSS variable
