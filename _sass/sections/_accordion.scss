@@ -1,4 +1,117 @@
 // Accordion section
 section.accordion {
+  .section-container {
+    padding: $spacer * 3;
+    background-color: $bg-color-grey;
+    color: $primary-color;
+    border-radius: $border-radius * 2;
+  }
 
+  .accordion {
+    display: flex;
+    gap: $spacer * 0.5;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accordion-buttons {
+    flex: 1;
+    min-width: 25%;
+
+    .accordion-button {
+      display: flex;
+      align-items: center;
+      gap: $spacer;
+      width: 100%;
+      padding: $spacer * 2;
+      margin-bottom: $spacer * 0.25;
+      background-color: $bg-color-alt;
+      color: $link-color;
+      border: none;
+      border-bottom: solid $spacer / 10 $gray-color;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      .accordion-icon {
+        flex-shrink: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $link-color;
+        transition: background-color 0.5s;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: lighten($link-color, 15%);
+
+        .accordion-icon {
+          background-color: lighten($link-color, 15%);
+        }
+      }
+
+      &.active {
+        background-color: $white;
+        color: $orange-color;
+
+        .accordion-icon {
+          background-color: $orange-color;
+        }
+
+        &:hover {
+          background-color: $white;
+          color: lighten($orange-color, 10%);
+
+          .accordion-icon {
+            background-color: lighten($orange-color, 10%);
+          }
+        }
+      }
+
+      h3 {
+        margin: 0;
+        font-size: $font-size-base * 1.5;
+        letter-spacing: -0.12rem;
+        text-align: left;
+      }
+    }
+  }
+
+  .accordion-items {
+    flex: 2;
+
+    .accordion-content {
+      flex: 1;
+      box-sizing: border-box;
+      min-height: 0;
+      padding: 0;
+      background-color: $white;
+      color: $primary-color;
+      border: none;
+      border-radius: $border-radius;
+
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s;
+
+      h4 {
+        background-color: transparent;
+        color: $orange-color;
+      }
+
+      &.active {
+        opacity: 1;
+        min-height: 100%;
+        max-height: 100%;
+        padding: $spacer * 2;
+        border-bottom: solid $spacer / 10 $gray-color;
+        overflow: visible;
+      }
+    }
+  }
 }
