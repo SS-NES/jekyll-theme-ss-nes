@@ -127,4 +127,11 @@ a.button {
     }
   }
 }
+
+.icon {
+  display: inline-block;
+  width: 2.875rem; // 34px
+  height: 2.875rem; // 34px
+  background-color: $primary-color;
+  mask-size: cover;
 }
