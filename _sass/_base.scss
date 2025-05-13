@@ -68,11 +68,29 @@ p {
   }
 }
 
+a {
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: $link-decoration;
+    background-color: transparent;
+    color: $link-color;
+    transition: color 0.3s;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
 .container {
   @include container();
 }
 
-.button {
+.button,
+a.button {
   display: inline-block;
   padding: $btn-padding-y $btn-padding-x;
   font-family: $btn-font-family;
@@ -89,10 +107,24 @@ p {
   user-select: none;
   border: $btn-border-width solid $btn-border-color;
   @include border-radius($btn-border-radius);
+  transition: $btn-transition;
+
+  &:hover {
+    background-color: lighten($btn-bg-color, 15%);
+    color: lighten($btn-color, 15%);
+    border-color: lighten($btn-border-color, 15%);
+  }
 
   &.secondary {
     background-color: $btn-secondary-bg-color;
     color: $btn-secondary-color;
     border-color: $btn-secondary-border-color;
+
+    &:hover {
+      background-color: lighten($btn-secondary-bg-color, 20%);
+      color: lighten($btn-secondary-color, 20%);
+      border-color: lighten($btn-secondary-border-color, 20%);
+    }
   }
+}
 }
