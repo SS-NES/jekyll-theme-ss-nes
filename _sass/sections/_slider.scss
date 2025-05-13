@@ -44,9 +44,11 @@ section.slider {
     }
 
     .slide-image {
-      max-width: 50%;
+      max-width: 40%;
       height: 100%;
       align-self: flex-start;
+      border-radius: $border-radius;
+      overflow: hidden;
 
       img {
         max-width: auto;
