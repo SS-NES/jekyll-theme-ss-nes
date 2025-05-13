@@ -7,6 +7,11 @@ section.slider {
     margin-right: calc(50% - 50vw);
   }
 
+  .glider {
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+
   .slider-buttons {
     display: none;
   }
