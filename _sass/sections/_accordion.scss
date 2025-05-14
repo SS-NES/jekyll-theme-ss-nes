@@ -104,6 +104,10 @@ section.accordion {
         color: $orange-color;
       }
 
+      img {
+        max-width: 100%;
+      }
+
       &.active {
         opacity: 1;
         min-height: 100%;
