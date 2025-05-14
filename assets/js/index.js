@@ -38,6 +38,21 @@
         document.getElementById(targetId).classList.add('active');
       });
     });
+
+    // Smooth scroll for internal links
+    const links = document.querySelectorAll('a[href^="#"], a[href^="/#"], a[href^="./#"]');
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        const targetId = href.startsWith('#') ? href.substring(1) : href.split('#')[1];
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, '', `#${targetId}`);
+        }
+      });
+    });
   });
 
   // Calculate scrollbar width and update CSS variable
