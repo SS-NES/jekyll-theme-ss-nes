@@ -5,6 +5,7 @@ section.hero {
   background-image: linear-gradient(to bottom, $hero-gradient-color1 0%, $hero-gradient-color2);
   color: $white;
   overflow-x: hidden;
+  padding-top: $spacer * 2;
 
   // Hero decoration image (background)
   &:before {
