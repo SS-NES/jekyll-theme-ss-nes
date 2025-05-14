@@ -5,7 +5,7 @@
       <p class="hero-subtitle">{{ site.data.hero.subtitle }}</p>
     </header>
     <div class="hero-text">
-      <p>{{ site.data.hero.text }}</p>
+      <p>{{ site.data.hero.text | markdownify }}</p>
     </div>
     <div class="hero-buttons">
     {% for button in site.data.hero.buttons %}
