@@ -1,7 +1,7 @@
 // Toolkit section
 section.toolkit {
   padding: $spacer * 6 0 $spacer * 10;
-  background-image: linear-gradient(to bottom, $blue-dark-color, #0a1930);
+  background-image: linear-gradient(to bottom, $blue-dark-color, $blue-extra-dark-color);
   color: $white;
 
   h2 {
