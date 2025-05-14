@@ -21,8 +21,9 @@ section.slider {
   }
 
   .slide {
+    box-sizing: border-box;
     margin-right: $spacer * 3;
-    padding: $spacer * 2;
+    padding: $spacer * 3;
     background-color: $white;
     color: $primary-color;
     border-radius: $border-radius;

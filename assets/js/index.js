@@ -6,11 +6,10 @@
     if (typeof Glider !== 'undefined') {
       new Glider(document.querySelector('.glider'), {
         slidesToScroll: 1,
-        slidesToShow: 1.5,
         draggable: true,
-        dragVelocity: 1.5,
+        dragVelocity: 2,
         scrollLock: true,
-        duration: 2.0,
+        duration: 1.0,
         dots: '.dots',
         arrows: {
           prev: '.glider-prev',
