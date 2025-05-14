@@ -40,7 +40,9 @@
     });
 
     // Smooth scroll for internal links
-    const links = document.querySelectorAll('a[href^="#"], a[href^="/#"], a[href^="./#"]');
+    const links = document.querySelectorAll(
+      'a[href^="#"], a[href^="/#"], a[href^="./#"], a[href*="#"]:not([href^="http"])'
+    );
     links.forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
