@@ -1,0 +1,32 @@
+# Footer section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+# Links to be displayed in the footer
+links1:
+  title: Tools
+  items:
+    - label: SMP Decision Tree
+      url: /#tools-smp-decision-tree
+    - label: SS-NES-lesson
+      url: /#tools-ss-nes-lesson
+    - label: Code-auditor
+      url: /#tools-code-auditor
+    - label: Meta-template
+      url: /#tools-meta-template
+    - label: python-template
+      url: /#tools-python-template
+
+# More links to be displayed in the footer
+links2:
+  title: Software using SS-NES best practices
+  items:
+    - label: Software link 1
+      url: /#external
+    - label: Software link 2
+      url: /#external
+
+# Copyright text shown at the bottom of the footer
+copyright: >-
+  This project was funded by NWO/TDCC grant number XXX

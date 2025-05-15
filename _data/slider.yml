@@ -1,0 +1,27 @@
+# Slider section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+title: Why does software sustainability matter?
+# subtitle: This is an optional subtitle
+
+slides:
+  - title: Example of existing project with SS-NES implementation
+    image_url: /assets/img/slider/slide1.jpg
+    image_alt: "Code shown on a computer screen in an office"
+    content: >-
+      The SS-NES best practices are already being implemented in various projects, such as the NES project.
+      This project serves as a prime example of how these practices can be effectively applied in real-world scenarios.
+  - title: More about existing project with SS-NES implementation
+    image_url: /assets/img/slider/slide2.jpg
+    image_alt: "Code on a computer screen"
+    content: >-
+      Veniam, odio velit quis in exerci praesent nulla nibh at illum ea minim eum blandit vero
+      erat nostrud consectetuer et iusto amet, nisl feugiat ad aliquip wisi delenit consequat.
+      Euismod te sit tation diam ut dolor ut consequat, tincidunt lobortis zzril in hendrerit
+      nonummy accumsan elit, dolore dolore autem volutpat. augue adipiscing vel eu ipsum eros
+      qui facilisi. ullamcorper enim Duis esse feugait dolore suscipit et Lorem Ut facilisis sed
+      duis vulputate luptatum dolor nulla magna vel dignissim aliquam iriure commodo molestie ex laoreet.
+
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.

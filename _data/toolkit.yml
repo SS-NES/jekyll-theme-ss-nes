@@ -1,0 +1,51 @@
+# Toolkit section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+title: Toolkit
+subtitle: Choose one of the tools below to guide your software to sustainability.
+
+items:
+  - title: SMP Decision Tree
+    icon: /assets/img/icons/tools/smp-decision-tree.svg
+    summary: >-
+      This is a questionnaire package for a Software Management Plan (SMP).
+      It is used with the docassemble framework: [https://docassemble.org](https://docassemble.org).
+    button:
+      label: View tool
+      url: /#toolkit-smp-decision-tree
+  - title: SS-NES-lesson
+    icon: /assets/img/icons/tools/ss-nes-lesson.svg
+    summary: >-
+      Training material of the software sustainability of the TDCC NES project.
+    button:
+      label: View tool
+      url: /#toolkit-ss-nes-lesson
+  - title: Code-auditor
+    icon: /assets/img/icons/tools/code-auditor.svg
+    summary: >-
+      A package and command-line utility to audit code quality and compliance to the best practices.
+    button:
+      label: View tool
+      url: /#toolkit-code-auditor
+  - title: Meta-template
+    icon: /assets/img/icons/tools/meta-template.svg
+    summary: >-
+      A toolkit to start software templates for research software and adopt best practices
+      on sustainable software for Natural and Engineering Sciences. It provides a way to align
+      best practices and reduce maintainance efforts across organisations, while allowing
+      organisation to customize software templates to their needs.
+    button:
+      label: View tool
+      url: /#toolkit-meta-template
+  - title: python-template
+    icon: /assets/img/icons/tools/python-template.svg
+    summary: >-
+      This is a copier Python software template that implements the best practices on
+      sustainable software for researchers in Natural and Engineering Science.
+      The template provides boilerplate code and assets to initiate the research software development,
+      including unit tests, documentation, etc.
+    button:
+      label: View tool
+      url: /#toolkit-python-template

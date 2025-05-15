@@ -1,0 +1,10 @@
+# Header section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+logo:
+  link: https://tdcc.nl
+  url: /assets/img/logos/logo-tdcc@2x.png
+  url_small: /assets/img/logos/logo-tdcc.png
+  alt: TDCC logo

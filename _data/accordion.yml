@@ -1,0 +1,23 @@
+# Accordion section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+title: How can I use best practices from SS-NES?
+# subtitle: This is an optional subtitle
+
+items:
+  - title: Guidance
+    icon: /assets/img/icons/guidance.svg
+    subtitle: Guidance on sustainable software for the NES domain
+    content: >-
+      A software management plan (SMP) aids in implementing best practices during software development and ensures the software
+      remains accessible and reusable in both the short and longer term. It also contributes to the reproducibility of results
+      and promotes collaborative work on open-source software for research. Moreover, an SMP encourages researchers to plan for
+      the software’s long-term sustainability and community uptake of the software.
+  - title: Tools
+    icon: /assets/img/icons/tools.svg
+  - title: Integrating digital infrastructure for sustainable software
+    icon: /assets/img/icons/integration.svg
+  - title: Learning resources
+    icon: /assets/img/icons/resources.svg

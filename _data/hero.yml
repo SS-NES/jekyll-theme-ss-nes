@@ -1,0 +1,20 @@
+# Hero section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+title: Best Practices for Sustainable Software
+subtitle: in Natural Science and Engineering
+text: >-
+  Sustainable software practices (software management, software quality, FAIR software,
+  and software preservation) are crucial for the reusability and long-term viability of
+  research software (scripts, code, tools, and digital methodologies) particularly in the
+  Natural Sciences & Engineering (NES) domain.
+image: /assets/img/hero.jpg
+image_alt: "SS-NES logo"
+buttons:
+  - label: Get Started
+    url: /#toolkit
+  - label: Learn More
+    url: /#learn
+    class: secondary
