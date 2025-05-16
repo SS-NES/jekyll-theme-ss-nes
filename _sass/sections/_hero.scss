@@ -93,12 +93,18 @@ section.hero {
   }
 
   .hero-buttons {
-    .button {
-      margin-left: $spacer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: $spacer * 1.5;
+    row-gap: $spacer * 0.75;
 
-      &:first-child {
-        margin-left: 0;
-      }
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+
+    .button {
+      margin: 0;
     }
   }
 }
