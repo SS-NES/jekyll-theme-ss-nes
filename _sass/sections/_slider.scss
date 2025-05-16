@@ -1,7 +1,8 @@
 // Slider section
 section.slider {
   .glider-contain {
-    width: 100vw; // Full width
+    // Full width
+    width: 100vw;
     max-width: calc(100vw - var(--scroll-bar-width));
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);

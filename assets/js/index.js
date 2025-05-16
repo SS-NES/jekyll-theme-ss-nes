@@ -67,4 +67,5 @@
     );
   }
   updateScrollbarWidth();
+  window.addEventListener('resize', updateScrollbarWidth);
 })()
