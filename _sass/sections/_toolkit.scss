@@ -20,15 +20,22 @@ section.toolkit {
     li {
       list-style: none;
       margin: 0 0 $spacer;
-      padding: 6.25rem 6.25rem 6.25rem 2.5rem;
+      padding: $spacer * 2.5;
       background-color: $white;
       color: $primary-color;
       border-radius: $border-radius * 3;
 
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      column-gap: $spacer * 3;
+      row-gap: $spacer * 3;
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        column-gap: $spacer * 3;
+        padding: $spacer * 6.25;
+        padding-left: $spacer * 2.5;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -37,20 +44,29 @@ section.toolkit {
       header {
         min-width: 25%;
         text-align: center;
+
+        .tool-icon {
+          display: inline-block;
+          margin-bottom: $spacer * 0.5;
+        }
       }
 
       .tool-content {
         align-self: center;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          text-align: left;
+        }
       }
 
       .tool-summary {
-        font-size: $font-size-base;
+        text-align: left;
       }
 
       .tool-link {
         display: inline-block;
         margin-top: $spacer * 2;
-        font-size: $font-size-base;
         white-space: nowrap;
       }
     }
