@@ -65,8 +65,11 @@ section.hero {
   header {
     h1 {
       margin: 0 0 $headings-margin-bottom;
-      letter-spacing: -0.12rem;
-      line-height: 125%;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
     }
 
     .hero-subtitle {
@@ -79,9 +82,14 @@ section.hero {
   }
 
   .hero-text {
-    margin: 3rem 0;
-    font-size: $h1-font-size * 0.44;
+    margin: $spacer * 1.875 0;
     font-weight: $font-weight-semibold;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin: $spacer * 3.75 0;
+      text-align: left;
+    }
   }
 
   .hero-buttons {
