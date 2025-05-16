@@ -52,24 +52,75 @@ h1, h2, h3, h4, h5, h6 {
   line-height: $headings-line-height;
   background-color: transparent;
   color: $headings-color;
+
+  @include media-breakpoint-up(md) {
+    line-height: $headings-line-height * 1.1;
+  }
 }
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: $h1-font-size * 0.444;
   font-weight: $font-weight-bold;
-  letter-spacing: -0.12rem;
+  line-height: $headings-line-height;
+  letter-spacing: -0.04rem;
+
+  font-size: clamp(
+    #{$h1-font-size * 0.333},
+    calc(#{$h1-font-size * 0.333} + 2vw),
+    $h1-font-size
+  );
+
+  @include media-breakpoint-up(md) {
+    letter-spacing: -0.12rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: clamp(
+      #{$h1-font-size * 0.333},
+      calc(#{$h1-font-size * 0.55} + 2vw),
+      $h1-font-size
+    );
+  }
 }
 
 h2 {
-  font-size: $h2-font-size;
+  font-size: $h2-font-size * 0.444;
   background-color: transparent;
   color: $blue-dark-color;
   letter-spacing: -0.12rem;
+
+  font-size: clamp(
+    #{$h2-font-size * 0.333},
+    calc(#{$h2-font-size * 0.4} + 2vw),
+    $h2-font-size
+  );
+
+  @include media-breakpoint-up(md) {
+    letter-spacing: -0.12rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: clamp(
+      #{$h2-font-size * 0.333},
+      calc(#{$h2-font-size * 0.5} + 2vw),
+      $h2-font-size * 0.889
+    );
+  }
 }
 
 h3 {
   font-size: $h3-font-size;
   letter-spacing: -0.06rem;
+
+  font-size: clamp(
+    #{$h3-font-size * 0.5},
+    calc(#{$h3-font-size * 0.333} + 2vw),
+    #{$h3-font-size * 0.667}
+  );
+
+  @include media-breakpoint-up(md) {
+    letter-spacing: -0.06rem;
+  }
 }
 
 h4 {
