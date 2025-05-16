@@ -65,6 +65,12 @@ p {
 
   &.subtitle {
     @extend h3;
+
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
   }
 }
 
