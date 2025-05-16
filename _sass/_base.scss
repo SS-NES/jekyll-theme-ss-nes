@@ -9,7 +9,39 @@ body {
   background: $body-bg;
   color: $body-color;
   font-family: $font-family-sans-serif;
-  line-height: $line-height-base;
+}
+
+body {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+
+  font-size: clamp(
+    #{$font-size-sm * 0.8},
+    calc(#{$font-size-sm * 0.8} + 2vw),
+    $font-size-sm
+  );
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+
+    font-size: clamp(
+      #{$font-size-sm},
+      calc(#{$font-size-sm} + 2vw),
+      $font-size-base
+    );
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+
+    font-size: clamp(
+      #{$font-size-base},
+      calc(#{$font-size-base} + 2vw),
+      $font-size-lg
+    );
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
