@@ -13,6 +13,17 @@ section.slider {
     overflow-x: hidden;
   }
 
+  .glider-dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: $link-color;
+    opacity: 0.3;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
   .slider-buttons {
     display: none;
   }
