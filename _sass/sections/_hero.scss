@@ -9,39 +9,57 @@ section.hero {
 
   // Hero decoration image (background)
   &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(160%,-7%);
-    z-index: 1;
-    width: 40%;
-    height: 80%;
-    background: transparent url('/assets/img/header-bg/hero-shape-bg.svg') no-repeat center center;
-    background-size: 100% 100%;
-    max-height: 80vh;
-    opacity: 0.2;
+    @include media-breakpoint-up(md) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(160%,-20%);
+      z-index: 1;
+      width: 40%;
+      height: 80%;
+      background: transparent url('/assets/img/header-bg/hero-shape-bg.svg') no-repeat center center;
+      background-size: 100% 100%;
+      max-height: 80vh;
+      opacity: 0.2;
+    }
+
+    @include media-breakpoint-up(lg) {
+      transform: translate(160%,-7%);
+    }
   }
 
   // Hero decoration image (foreground)
   &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(140%,17%);
-    z-index: 1;
-    width: 40%;
-    height: 80%;
-    background: transparent url('/assets/img/header-bg/hero-shape-fg.svg') no-repeat center center;
-    background-size: 100% 100%;
-    max-height: 80vh;
+    @include media-breakpoint-up(md) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(140%,0%);
+      z-index: 2;
+      width: 40%;
+      height: 80%;
+      background: transparent url('/assets/img/header-bg/hero-shape-fg.svg') no-repeat center center;
+      background-size: 100% 100%;
+      max-height: 80vh;
+    }
+
+    @include media-breakpoint-up(lg) {
+      transform: translate(140%,17%);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 3; // Ensure container is above background images
   }
 
   header,
   .hero-text {
-    z-index: 2;
-    width: 60%;
+    @include media-breakpoint-up(md) {
+      max-width: 60%;
+    }
   }
 
   header {
