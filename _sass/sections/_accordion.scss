@@ -1,30 +1,51 @@
 // Accordion section
 section.accordion {
   .section-container {
-    padding: $spacer * 3;
+    padding: $spacer * 0.5;
     background-color: $bg-color-grey;
     color: $primary-color;
     border-radius: $border-radius * 2;
+
+    @include media-breakpoint-up(md) {
+      padding: $spacer;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: $spacer * 3;
+    }
   }
 
   .accordion {
     display: flex;
+    flex-direction: column;
     gap: $spacer * 0.5;
-    max-width: 90%;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      max-width: 90%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 1050px;
+    }
   }
 
   .accordion-buttons {
     flex: 1;
-    min-width: 25%;
+
+    @include media-breakpoint-up(md) {
+      min-width: 25%;
+    }
 
     .accordion-button {
       display: flex;
       align-items: center;
       gap: $spacer;
       width: 100%;
-      padding: $spacer * 2;
+      padding: $spacer;
       margin-bottom: $spacer * 0.25;
       background-color: $bg-color-alt;
       color: $link-color;
@@ -33,6 +54,10 @@ section.accordion {
       border-radius: $border-radius;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
+
+      @include media-breakpoint-up(md) {
+        padding: $spacer * 2;
+      }
 
       .accordion-icon {
         flex-shrink: 0;
