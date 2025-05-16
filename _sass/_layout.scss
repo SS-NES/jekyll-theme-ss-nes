@@ -12,6 +12,19 @@
   background-color: $orange-color;
   color: $white;
   padding: $spacer 0;
+
+  a {
+    display: inline-block;
+
+    img {
+      width: auto;
+      max-height: 3.5rem;
+
+      @include media-breakpoint-up(md) {
+        max-height: none;
+      }
+    }
+  }
 }
 
 // Sections
