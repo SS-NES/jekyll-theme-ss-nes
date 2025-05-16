@@ -100,8 +100,8 @@ a.button {
   display: inline-block;
   padding: $btn-padding-y $btn-padding-x;
   font-family: $btn-font-family;
-  font-size: $btn-font-size; // TODO - check if this is correct
-  font-weight: $btn-font-weight;
+  font-size: $btn-font-size * 0.8667;
+  font-weight: $btn-font-weight * 0.9;
   line-height: $btn-line-height;
   background-color: $btn-bg-color;
   color: $btn-color;
@@ -131,6 +131,10 @@ a.button {
       color: lighten($btn-secondary-color, 20%);
       border-color: lighten($btn-secondary-border-color, 20%);
     }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: $btn-font-size;
   }
 }
 
