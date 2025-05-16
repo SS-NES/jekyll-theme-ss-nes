@@ -98,8 +98,6 @@ section.accordion {
 
       h3 {
         margin: 0;
-        font-size: $font-size-base * 1.5;
-        letter-spacing: -0.12rem;
         text-align: left;
       }
     }
@@ -115,8 +113,6 @@ section.accordion {
       padding: 0;
       background-color: $white;
       color: $primary-color;
-      font-size: $font-size-base;
-      line-height: $line-height-base;
       border: none;
       border-radius: $border-radius;
 
