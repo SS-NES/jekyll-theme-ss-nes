@@ -59,7 +59,6 @@ section.slider {
     border-radius: $border-radius;
 
     @include media-breakpoint-up(md) {
-      height: 100%;
       margin-right: $spacer * 3;
       padding: $spacer * 3;
     }
