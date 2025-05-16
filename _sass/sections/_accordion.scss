@@ -25,7 +25,6 @@ section.accordion {
 
     @include media-breakpoint-up(lg) {
       flex-direction: row;
-      max-width: 90%;
     }
 
     @include media-breakpoint-up(xl) {
