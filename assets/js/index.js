@@ -2,6 +2,7 @@
   'use strict';
 
   document.addEventListener('DOMContentLoaded', () => {
+    //
     // Initialize slider using Glider.js library
     if (typeof Glider !== 'undefined') {
       new Glider(document.querySelector('.glider'), {
@@ -18,6 +19,7 @@
       });
     }
 
+    //
     // Initialize accordion(s)
     const buttons = document.querySelectorAll('.accordion-button');
     const contents = document.querySelectorAll('.accordion-content');
@@ -50,6 +52,7 @@
       });
     });
 
+    //
     // Smooth scroll for internal links
     const links = document.querySelectorAll(
       'a[href^="#"], a[href^="/#"], a[href^="./#"], a[href*="#"]:not([href^="http"])'
@@ -68,6 +71,7 @@
     });
   });
 
+  //
   // Calculate scrollbar width and update CSS variable
   function updateScrollbarWidth() {
     const scrollbarWidth =
