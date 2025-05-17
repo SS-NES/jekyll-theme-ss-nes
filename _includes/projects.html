@@ -1,0 +1,30 @@
+{% if site.data.projects.items and site.data.projects.items.size > 0 %}
+<section class="projects" id="projects">
+  <div class="container">
+    <header>
+      <h2>{{ site.data.projects.title }}</h2>
+      {% if site.data.projects.subtitle %}
+        <p class="subtitle">{{ site.data.projects.subtitle }}</p>
+      {% endif %}
+    </header>
+    <div class="section-container">
+      <ul class="projects-container">
+      {% for project in site.data.projects.items %}
+        <li class="project-item" id="project-{{ project.title | downcase | replace: ' ', '-' | replace: '/', '-' | replace: '&', 'and' | replace: '.', '' | replace: ',', '' | replace: '--', '-' }}">
+          <header>
+            <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+              {% if project.image %}
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              {% endif %}
+              <h3>{{ project.title }}</h3>
+            </a>
+          </header>
+          <div class="project-description">
+            {{ project.description | markdownify }}
+          </div>
+        </li>
+      {% endfor %}
+      </ul>
+  </div>
+</section>
+{% endif %}
