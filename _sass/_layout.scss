@@ -17,6 +17,10 @@
     padding: $spacer 0;
   }
 
+  @media (max-height: #{map-get($grid-breakpoints, sm) - 0.02}) and (orientation: landscape) {
+    padding: $spacer * 0.625 0;
+  }
+
   a {
     display: inline-block;
 
