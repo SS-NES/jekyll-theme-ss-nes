@@ -28,13 +28,21 @@ section.toolkit {
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: $spacer * 3;
+      gap: $spacer * 2;
 
       @include media-breakpoint-up(md) {
         flex-direction: row;
-        column-gap: $spacer * 3;
+      }
+
+      @include media-breakpoint-up(lg) {
+        gap: $spacer * 3;
         padding: $spacer * 6.25;
         padding-left: $spacer * 2.5;
+      }
+
+      // Override padding for landscape orientation on small screens
+      @media (max-height: #{map-get($grid-breakpoints, md) - 0.02}) and (orientation: landscape) {
+        padding: $spacer * 2.5;
       }
 
       &:last-child {
