@@ -1,0 +1,17 @@
+# (optional) Projects section data
+#
+# Note: This file contains EXAMPLE content. Please replace it by adding a customized version
+# of this file to the `_data` folder of your Jekyll site.
+
+# The projects section is optional. If you don't want to use it, just comment out the `items` list
+# or remove the entire file from the `_data` folder of your Jekyll site.
+
+title: Projects
+# subtitle: This is an optional subtitle
+
+items:
+  - title: Project 1
+    description: >-
+      This is a description of project 1.
+    url: https://example.com/project1
+    image: /assets/img/projects/project1.png
