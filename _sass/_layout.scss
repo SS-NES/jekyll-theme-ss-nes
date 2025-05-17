@@ -2,25 +2,70 @@
 
 // Main wrapper
 .wrapper {
-  // display: flex;
-  // flex-direction: column;
   min-height: 80vh;
+  background-image: url('/assets/img/body-bg-linesdots.png');
+  background-size: contain;
+  background-position: center 200px;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(sm) {
+    background-position: center 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-image: none;
+  }
 }
 
 // Header
 .wrapper > header {
   background-color: $orange-color;
   color: $white;
-  padding: $spacer 0;
+  padding: $spacer * 0.625 0;
+
+  @include media-breakpoint-up(md) {
+    padding: $spacer 0;
+  }
+
+  @media (max-height: #{map-get($grid-breakpoints, sm) - 0.02}) and (orientation: landscape) {
+    padding: $spacer * 0.625 0;
+  }
+
+  a {
+    display: inline-block;
+
+    img {
+      width: auto;
+      max-height: 3.5rem;
+
+      @include media-breakpoint-up(md) {
+        max-height: none;
+      }
+    }
+  }
 }
 
 // Sections
 section {
-  padding: $spacer * 7.5 0;
+  padding: $spacer * 3.75 0;
+
+  @include media-breakpoint-up(md) {
+    padding: $spacer * 7.5 0;
+  }
 
   h2 {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+
     &:last-child {
-      margin-bottom: $spacer * 3;
+      margin-bottom: $spacer * 2;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $spacer * 3;
+      }
     }
   }
 }
