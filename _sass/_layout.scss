@@ -2,9 +2,19 @@
 
 // Main wrapper
 .wrapper {
-  // display: flex;
-  // flex-direction: column;
   min-height: 80vh;
+  background-image: url('/assets/img/body-bg-linesdots.png');
+  background-size: contain;
+  background-position: center 200px;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(sm) {
+    background-position: center 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-image: none;
+  }
 }
 
 // Header
