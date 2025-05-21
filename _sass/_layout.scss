@@ -70,6 +70,16 @@ section {
   }
 }
 
+section:not(.hero),
+.wrapper > footer {
+  opacity: 0;
+  animation: section-fade-in 1.8s ease forwards;
+
+  @supports not (animation: name) {
+    opacity: 1;
+  }
+}
+
 @import 'sections/hero';
 @import 'sections/slider';
 @import 'sections/accordion';

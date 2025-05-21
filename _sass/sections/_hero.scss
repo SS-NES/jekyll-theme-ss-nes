@@ -14,57 +14,86 @@ section.hero {
   // Hero decoration image (background)
   &:before {
     @include media-breakpoint-up(md) {
+      --hero-bg-transform-from: translate(150%,-10%);
+      --hero-bg-transform-to: translate(160%,-20%);
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(160%,-20%);
+      transform: var(--hero-bg-transform-to, translate(160%,-20%));
       z-index: 1;
       width: 40%;
       height: 80%;
       background: transparent url('/assets/img/header-bg/hero-shape-bg.svg') no-repeat center center;
       background-size: 100% 100%;
       max-height: 80vh;
-      opacity: 0.2;
+      opacity: 0;
+      animation: hero-fade-in-bg 0.8s ease 0.4s forwards;
+    }
+
+    @supports not (animation: name) {
+      @include media-breakpoint-up(md) {
+        opacity: 0.2;
+      }
     }
 
     @include media-breakpoint-up(lg) {
-      transform: translate(160%,-7%);
+      --hero-bg-transform-from: translate(150%,7%);
+      --hero-bg-transform-to: translate(160%,-7%);
     }
 
     @media (max-height: #{map-get($grid-breakpoints, md) - 0.02}) and (orientation: landscape) {
-      transform: translate(160%,-7%);
+      --hero-bg-transform-from: translate(150%,7%);
+      --hero-bg-transform-to: translate(160%,-7%);
     }
   }
 
   // Hero decoration image (foreground)
   &:after {
     @include media-breakpoint-up(md) {
+      --hero-fg-transform-from: translate(150%,7%);
+      --hero-fg-transform-to: translate(140%,0%);
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(140%,0%);
+      transform: var(--hero-fg-transform-to, translate(140%,0%));
       z-index: 2;
       width: 40%;
       height: 80%;
       background: transparent url('/assets/img/header-bg/hero-shape-fg.svg') no-repeat center center;
       background-size: 100% 100%;
       max-height: 80vh;
+      opacity: 0;
+      animation: hero-fade-in-fg 0.8s ease 0.2s forwards;
+    }
+
+    @supports not (animation: name) {
+      @include media-breakpoint-up(md) {
+        opacity: 1;
+      }
     }
 
     @include media-breakpoint-up(lg) {
-      transform: translate(140%,17%);
+      --hero-fg-transform-from: translate(150%,7%);
+      --hero-fg-transform-to: translate(140%,17%);
     }
 
     @media (max-height: #{map-get($grid-breakpoints, md) - 0.02}) and (orientation: landscape) {
-      transform: translate(140%,17%);
+      --hero-fg-transform-from: translate(150%,7%);
+      --hero-fg-transform-to: translate(140%,17%);
     }
   }
 
   .container {
     position: relative;
     z-index: 3; // Ensure container is above background images
+    opacity: 0;
+    animation: hero-fade-in 1.5s ease forwards;
+
+    @supports not (animation: name) {
+      opacity: 1;
+    }
   }
 
   header,
