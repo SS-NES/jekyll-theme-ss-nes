@@ -65,6 +65,12 @@ section.hero {
   .container {
     position: relative;
     z-index: 3; // Ensure container is above background images
+    opacity: 0;
+    animation: hero-fade-in 1.5s ease forwards;
+
+    @supports not (animation: name) {
+      opacity: 1;
+    }
   }
 
   header,
