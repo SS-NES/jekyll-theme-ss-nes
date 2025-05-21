@@ -210,6 +210,7 @@ a.button {
     background-color: lighten($btn-bg-color, 15%);
     color: lighten($btn-color, 15%);
     border-color: lighten($btn-border-color, 15%);
+    box-shadow: $btn-box-shadow;
   }
 
   &.secondary {
