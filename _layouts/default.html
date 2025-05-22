@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/glider.min.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.theme_version }}">
     <script src="{{ "/assets/js/glider.min.js" | relative_url }}" defer></script>
-    <script src="{{ "/assets/js/index.js" | relative_url }}" defer></script>
+    <script src="{{ "/assets/js/index.js" | relative_url }}?v={{ site.theme_version }}" defer></script>
     <link rel="icon" type="image/png" href="{{ "/assets/img/favicon/favicon-96x96.png" | relative_url }}" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="{{ "/assets/img/favicon/favicon.svg" | relative_url }}">
     <link rel="shortcut icon" href="{{ "/assets/img/favicon/favicon.ico" | relative_url }}">
