@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-ss-nes"
-  spec.version       = "1.1.1"
+  spec.version       = "1.1.2"
   spec.authors       = ["Vincent Twigt"]
   spec.email         = ["135724179+vtwigt@users.noreply.github.com"]
 
